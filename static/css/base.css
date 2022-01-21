@@ -1,3 +1,10 @@
-body { 
-    padding-top: 65px; 
+body {
+    padding-top: 150px;
 }
+
+#navlogo {
+    padding-top: 10px;
+    max-width: 100%;
+    max-height: 100px;
+}
+
