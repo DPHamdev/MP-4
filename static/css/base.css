@@ -1,10 +1,44 @@
 body {
-    padding-top: 150px;
+    padding-top: 100px;
+    background-color: #003459;
 }
 
-#navlogo {
-    padding-top: 10px;
-    max-width: 100%;
-    max-height: 100px;
+header {
+    background-color: white;
 }
 
+.nav-links {
+    font-weight: 600;
+}
+
+footer {
+    position: fixed;
+    height: 75px;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.socials {
+    font-size: xx-large;
+}
+
+.nav-icon {
+    color: white;
+}
+
+.brand {
+    color: black !important;
+}
+
+a:hover {
+    color: #007ea7 !important;
+}
+
+ul > li {
+    display: inline-block !important;
+}
+
+.nav-link {
+    color: black !important;
+}
