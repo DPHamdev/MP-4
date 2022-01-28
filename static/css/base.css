@@ -87,3 +87,12 @@ a:hover {
     background: white;
     width: 100%;
 }
+
+.index-room-two {
+    background: black;
+    width: 100%;
+}
+
+.hr-wt {
+    border-top: 1px solid white;
+}
