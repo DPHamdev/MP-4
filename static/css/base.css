@@ -83,6 +83,8 @@ a:hover {
     color: #007ea7 !important;
 }
 
+
+/* Room rows on Home Page */
 .index-room-one {
     margin-top: 250px;
     background: white;
@@ -91,6 +93,11 @@ a:hover {
 
 .index-room-two {
     background: black;
+    width: 100%;
+}
+
+.index-room-three {
+    background: white;
     width: 100%;
 }
 
