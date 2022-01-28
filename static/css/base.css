@@ -55,11 +55,11 @@ footer {
     height: 75px;
     bottom: 0;
     width: 100%;
-    background-color: white;
+    background-color: black;
 }
 
 .footer-link {
-    color: black !important;
+    color: white !important;
 }
 
 .socials {
