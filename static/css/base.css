@@ -2,6 +2,10 @@ body {
     background-color: #003459;
 }
 
+.nav-logo {
+    max-width: 70px;
+}
+
 .nav-links {
     font-weight: 600;
 }
