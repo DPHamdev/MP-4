@@ -17,6 +17,7 @@ body {
     background: url("/media/images/bandBackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 /* Navbar CSS */
@@ -39,10 +40,17 @@ ul > li {
     font-size: large;
 }
 
+/* Search function CSS */
+
+.form-control:focus, .form-control:active {
+    border-color: #000;
+    outline: 0;
+    box-shadow: inset 0 0 0;
+}
+
 /* Footer CSS */
 
 footer {
-    position: fixed;
     height: 75px;
     bottom: 0;
     width: 100%;
@@ -74,10 +82,8 @@ a:hover {
     color: #007ea7 !important;
 }
 
-
-.form-control:focus, .form-control:active {
-    border-color: #000;
-    outline: 0;
-    box-shadow: inset 0 0 0;
+.index-room-one {
+    margin-top: 250px;
+    background: white;
+    width: 100%;
 }
-
