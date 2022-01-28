@@ -36,29 +36,58 @@
         <header class="container mx-auto">
             <nav class="navbar w-100 navbar-expand-lg navbar-light">
                 <div class="container-fluid">
-                    <!-- <img src="/media/images/SHS_Logo.png" class="bg-light navbar-brand nav-logo" href="{% url 'home' %}"> -->
                     <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbar" aria-controls="mobileNavbar" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="mobileNavbar">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">REHEARSALS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">CONTACT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">FAQ's</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">REHEARSALS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">CONTACT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">FAQ's</a>
+                            </li>
                         </ul>
-                        <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-warning" type="submit">Search</button>
-                        </form>
+
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item d-flex">
+                                <div class="collapse" id="searchForm">
+                                    <input id="search" type="search" class="form-control border-0" placeholder="search" />
+                                </div>
+                                <a class="nav-link ml-auto" 
+                                    href="#searchForm" 
+                                    data-bs-target="#searchForm" 
+                                    data-bs-toggle="collapse"
+                                    aria-controls = "searchForm">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="btn-sm mx-1 btn-warning">
+                            Sign up
+                        </div>
+
+                        <div class="btn-sm mx-2 btn-dark">
+                            Login
+                        </div>
+
+                        <!-- <div class="mx-1">
+                            <span>
+                                <i class="fas fa-search" data-bs-toggle="collapse" data-bs-target="#search" aria-controls="search" aria-expanded="false" aria-label="Toggle Search"></i>
+                            </span>
+                        </div>
+
+                        <form class="d-flex search collapse" id="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-warning" type="submit">Search</button>
+                        </form> -->
                     </div>
                 </div>
               </nav>
@@ -76,6 +105,13 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script>
+
+        $('#searchForm').on('shown.bs.collapse', function () {
+            // focus input on collapse
+            $("#search").focus()
+        })
+        </script>
     {% endblock %}
 
     <footer>
@@ -94,6 +130,7 @@
             </div>
         </div>
     </footer>
+
 
   </body>
 </html>
