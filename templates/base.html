@@ -69,14 +69,31 @@
                                 </a>
                             </li>
                         </ul>
-
-                        <button class="btn-sm mx-1 btn-warning">
-                            Sign up
-                        </button>
-
-                        <button class="btn-sm mx-2 btn-dark">
-                            Login
-                        </button>
+                        
+                        <li class="dropdown">
+                            <a href="#" class="nav-link" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div>
+                                        <i class="fas fa-user-circle"></i>
+                                        <div class="my-0 fs-6">
+                                            My Account
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu bg-dark border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a href="" class="dropdown-item raj-wt">Booking Management</a>
+                                {% endif %}
+                                    <a href="" class="dropdown-item raj-wt">My Profile</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item raj-wt">Logout</a>
+                                {% else %}
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item raj-wt">Register</a>
+                                    <a href="{% url 'account_login' %}" class="dropdown-item raj-wt">Login</a>
+                                {% endif %}
+                            </div>
+                        </li>
                     </div>
                 </div>
               </nav>
@@ -89,6 +106,24 @@
 
     {% block page_header %}
     {% endblock %}
+
+    <div class="container-fluid h-100">
+        <div class="mx-auto align-items-center index-image-row text-center row h-100" >
+            <div class="col">
+                <a href="{% url 'home' %}">
+                    <div id="indexLogo"></div>
+                </a>
+            </div>
+            <div class="col">
+                <h1 class="text-center raj-wt">
+                    REHEARSAL ROOMS
+                </h1>
+                <h4 class="text-center raj-wt">
+                    3 PROFESSIONAL ROOMS TO CHOOSE FROM
+                </h4>
+            </div>
+        </div>
+    </div>  
 
     {% block content %}
     {% endblock %}
