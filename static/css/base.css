@@ -52,6 +52,7 @@ ul > li {
 /* Footer CSS */
 
 footer {
+    position: fixed;
     height: 75px;
     bottom: 0;
     width: 100%;

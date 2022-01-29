@@ -110,9 +110,11 @@
     <div class="container-fluid h-100">
         <div class="mx-auto align-items-center index-image-row text-center row h-100" >
             <div class="col">
-                <a href="{% url 'home' %}">
-                    <div id="indexLogo"></div>
-                </a>
+                    <a href="{% url 'home' %}">
+                        <div id="indexLogo">
+
+                        </div>
+                    </a>
             </div>
             <div class="col">
                 <h1 class="text-center raj-wt">
@@ -125,8 +127,31 @@
         </div>
     </div>  
 
+
+
     {% block content %}
+    {% block accountFormat %}
+        <div class="text-center bg-light my-0">
+    TEST
+    TEST
+    TEST
+    TEST
+    TEST
+    TEST
+    TEST
+    TEST
+    TEST
+    TEST
+    TEST
+    TEST
+    TEST
+    TEST
+    TEST
+        </div>
     {% endblock %}
+    {% endblock %}
+
+    
 
     {% block postloadjs %}
     <script>
