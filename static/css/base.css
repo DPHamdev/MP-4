@@ -14,6 +14,7 @@
 /* Body CSS */
 
 body {
+    padding-top: 130px;
     background: url("/media/images/bandBackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -122,3 +123,10 @@ a:hover {
         padding-left: 5px;
     }
   }
+
+  @media (min-width: 995px) {
+    .navbar-collapse
+      {
+          background-color: black !important;
+
+      }
