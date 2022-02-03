@@ -2,12 +2,13 @@
 {% load static %}
 
 
+
+
 {% block content %}
 
 {% include 'includes/search.html' %}
 
+
 {% endblock %}
 
-{% block datepickerJS %}
-{% include 'booking/assets/js/searchFunction.js' %}
-{% endblock %}
+<script src="{% static 'assets/js/searchFunction.js' %}"></script>
