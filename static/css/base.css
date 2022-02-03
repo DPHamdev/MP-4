@@ -15,6 +15,7 @@
 
 body {
     padding-top: 130px;
+    padding-bottom: 100px;
     background: url("/media/images/bandBackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,7 +54,6 @@ ul > li {
 /* Footer CSS */
 
 footer {
-    position: fixed;
     height: 75px;
     bottom: 0;
     width: 100%;
