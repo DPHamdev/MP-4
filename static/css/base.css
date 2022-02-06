@@ -11,10 +11,15 @@
     color: black;
 }
 
+.bg-blk {
+    background-color: #000 !important;
+}
+
 /* Body CSS */
 
 body {
     padding-top: 130px;
+    padding-bottom: 70px;
     background: url("/media/images/bandBackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
