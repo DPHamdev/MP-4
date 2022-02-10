@@ -240,18 +240,22 @@ a:hover {
         opacity: 1
     }
     
-    .cell {
+    .time-cell,
+    .dur-cell {
         border: 1px solid #BDBDBD;
         margin: 2px;
         cursor: pointer
     }
     
-    .cell:hover {
-        border: 1px solid #3D5AFE
+    .time-cell:hover,
+    .dur-cell:hover {
+        border: 1px solid #a31a1a;
+        background-color:#a31a1a;
     }
     
-    .cell.select {
-        background-color: #3D5AFE;
+    .time-cell.select,
+    .dur-cell.select {
+        background-color: #000000;
         color: #fff
     }
     
