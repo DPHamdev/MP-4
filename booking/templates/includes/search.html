@@ -26,14 +26,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="dateCollapse" class="collapse" aria-labelledby="dateHeading" data-parent="#dateAccordion">
-                    <div class="card-body" id="dateHide" >
-                        <div class="row mx-2">
-                            <input onchange="displayDate()" onselect="hideDatepicker()" type="text" id="dp1" class="col-8 mx-0 my-1 py-1 card-header bg-blk raj-wt fs-4 text-center datepicker" placeholder="Pick Date" name="date" readonly>
-                            <div class="my-auto col text-center"><i class="raj-wt fs-3 text-right far fa-calendar-alt"></i></div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
 
@@ -60,6 +53,18 @@
 
 
         <div class="row w-100 container-fluid d-flex justify-content-end ">
+
+            <div class="col my-1">
+                <div id="dateCollapse" class="collapse" aria-labelledby="dateHeading" data-parent="#dateAccordion">
+                    <div class="card-body bg-dark my-1" id="dateHide" >
+                        <div class="row mx-2">
+                            <input onchange="displayDate()" onselect="hideDatepicker()" type="text" id="dp1" class="col-8 mx-0 my-1 py-1 card-header bg-blk raj-wt fs-4 text-center datepicker" placeholder="Pick Date" name="date" readonly>
+                            <div class="my-auto col text-center"><i class="raj-wt fs-3 text-right far fa-calendar-alt"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="col my-1">
         <div id="timeCollapse" class="collapse " aria-labelledby="timeHeading" data-parent="#timeAccordion">
             <div class="card-body bg-dark container ">
@@ -163,6 +168,7 @@
         </div>
         </div>
         </div>
+
         
 
 
