@@ -6,20 +6,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
 
-<div class="container-fluid px-0 px-sm-4 mx-auto">
-    <div class="row justify-content-center mx-0">
+<div class="container-fluid px-0 mt-3 px-sm-4 mx-auto">
+    <div class="d-flex flex-row justify-content-center mx-0">
         <div class="accordion col-sm-6" id="dateAccordion">
-            <div class="card justify-content-center bg-dark">
+            <div class="card bg-dark">
                 <div class="card-header" id="dateHeading" type="button" data-toggle="collapse" data-target="#dateCollapse" aria-expanded="false" aria-controls="dateCollapse">
-                    <div class="row">
-                        <div class="raj-wt fs-3 col-6 text-left">
+                    <div class="d-flex justify-content-center flex-row">
+                        <div class="raj-wt d-inline-flex fs-6 col-6 text-left align-top">
                             Date
                         </div>
-                        <div class="raj-wt fs-3 col-6 text-right">
-                            <i class="fas fa-chevron-down"></i>
+                        <div class="raj-wt fs-3 col-6 text-right ">
+                            <i class="d-inline-flex fas fa-chevron-down "></i>
                         </div>
                     </div>
-                    <div class="row bg-blk m-1">
+                    <div class="d-flex flex-row justify-content-center bg-blk m-1">
                         <div class="col raj-wt text-center mx-3" id="dateSelectCol" >
                             <div id="dateSelect" class="fs-4">
                             </div>
@@ -33,7 +33,7 @@
         <div class="accordion col-sm-6" id="timeAccordion">
             <div class="card justify-content-center bg-dark">
                 <div class="card-header" id="timeHeading" type="button" data-toggle="collapse" data-target="#timeCollapse" aria-expanded="false" aria-controls="timeCollapse">
-                    <div class="row">
+                    <div class="d-flex flex-row">
                         <div class="raj-wt fs-3 col-6 text-right">
                             Time
                         </div>
@@ -41,7 +41,7 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                     </div>
-                    <div class="row bg-blk m-1">
+                    <div class="d-flex flex-row bg-blk m-1">
                         <div class="col raj-wt text-center mx-3" id="dateSelectCol" >
                             <div id="timeSelect" class="fs-4">
                             </div>
@@ -50,9 +50,11 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-
-        <div class="row w-100 container-fluid d-flex justify-content-end ">
+<div class="container-fluid px-0 px-sm-4 mx-auto">
+        <div class="row w-100 d-flex justify-content-end mx-0 ">
 
             <div class="col my-1">
                 <div id="dateCollapse" class="collapse" aria-labelledby="dateHeading" data-parent="#dateAccordion">
@@ -168,6 +170,7 @@
         </div>
         </div>
         </div>
+</div>
 
         
 

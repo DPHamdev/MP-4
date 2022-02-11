@@ -22,7 +22,7 @@ $(document).ready(function(){
   
   });
 
-let dateRow = document.getElementById('dateHeading');
+let dateRow = document.getElementById('dateCollapse');
 let datePick = document.getElementById('dp1');
 let showDate = document.getElementById('dateSelect');
 
@@ -30,6 +30,14 @@ let showDate = document.getElementById('dateSelect');
 function displayDate() {
     showDate.innerHTML = String(datePick.value);
     showDate.style.display = "block";
+    showDate.onchange = function() {
+      if (dateRow.style.display == "block") {
+        dateRow.classList.remove == "show";
+      }
+      else {
+        dateRow.style.display == "block"
+      }
+    }
 };
 
 let timeVal = document.getElementsByClassName('time-cell');
