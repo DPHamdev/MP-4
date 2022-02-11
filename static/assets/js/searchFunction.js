@@ -22,11 +22,30 @@ $(document).ready(function(){
   
   });
 
+let dateRow = document.getElementById('dateHeading');
 let datePick = document.getElementById('dp1');
-let showDate = document.getElementById('dateSelect')
+let showDate = document.getElementById('dateSelect');
+
 
 function displayDate() {
     showDate.innerHTML = String(datePick.value);
     showDate.style.display = "block";
 };
 
+let timeVal = document.getElementsByClassName('time-cell');
+let timeCell = document.getElementsByClassName('time-cell')[''];
+let timeVar = timeCell.length;
+
+console.log(timeCell)
+
+// let timeSelect = timeCell.addEventListener("click", displayTime);
+let showTime = document.getElementById('timeSelect');
+
+function displayTime() {
+  showTime.innerHTML = timeCell[i].value;
+  showTime.style.display = "block";
+};
+
+for (var i = 0; i < timeVar; i++) {
+  timeCell[i].addEventListener('click', displayTime, false);
+}

@@ -22,15 +22,14 @@
                     <div class="row bg-blk m-1">
                         <div class="col raj-wt text-center mx-3" id="dateSelectCol" >
                             <div id="dateSelect" class="fs-4">
-                               
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="dateCollapse" class="collapse" aria-labelledby="dateHeading" data-parent="#dateAccordion">
-                    <div class="card-body" >
+                    <div class="card-body" id="dateHide" >
                         <div class="row mx-2">
-                            <input onchange="displayDate()" type="text" id="dp1" class="col-8 mx-0 my-1 py-1 card-header bg-blk raj-wt fs-4 text-center datepicker" placeholder="Pick Date" name="date" readonly>
+                            <input onchange="displayDate()" onselect="hideDatepicker()" type="text" id="dp1" class="col-8 mx-0 my-1 py-1 card-header bg-blk raj-wt fs-4 text-center datepicker" placeholder="Pick Date" name="date" readonly>
                             <div class="my-auto col text-center"><i class="raj-wt fs-3 text-right far fa-calendar-alt"></i></div>
                         </div>
                     </div>
@@ -49,108 +48,120 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                     </div>
-                </div>
-                <div id="timeCollapse" class="collapse" aria-labelledby="timeHeading" data-parent="#timeAccordion">
-                    <div class="card-body container-fluid">
-                        <div class="row w-100 mx-0">
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col mx-3 my-1 py-1 card-header bg-blk raj-wt fs-4 text-center">Start Time</div>
-                                </div>
-                                    <div class="row text-center mx-0">
-                                        <div class="col mx-1 px-1">
-                                            <div class="time-cell raj-wt text-center fs-6 px-1 py-1">12 PM</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="time-cell raj-wt text-center fs-6 px-1 py-1">1 PM</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="time-cell raj-wt text-center fs-6 px-1 py-1">2 PM</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="time-cell raj-wt text-center fs-6 px-1 py-1">3 PM</div>
-                                        </div>
-                                    </div>
-                                    <div class="row text-center mx-0">
-                                        <div class="col mx-1 px-1">
-                                            <div class="time-cell raj-wt text-center fs-6 px-1 py-1">4 PM</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="time-cell raj-wt text-center fs-6 px-1 py-1">5 PM</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="time-cell raj-wt text-center fs-6 px-1 py-1">6 PM</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="time-cell raj-wt text-center fs-6 px-1 py-1">7 PM</div>
-                                        </div>
-                                    </div>
-                                    <div class="row text-center mx-0">
-                                        <div class="col mx-1 px-1">
-                                            <div class="time-cell raj-wt text-center fs-6 px-1 py-1">8 PM</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="time-cell raj-wt text-center fs-6 px-1 py-1">9 PM</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="time-cell raj-wt text-center fs-6 px-1 py-1">10 PM</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="time-cell raj-wt text-center fs-6 px-1 py-1">11 PM</div>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col mx-3 my-1 py-1 card-header bg-blk raj-wt fs-4 text-center">Duration</div>
-                                </div>
-                                    <div class="row text-center mx-0">
-                                        <div class="col mx-1 px-1">
-                                            <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">1 HR</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">2 HRS</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">3 HRS</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">4 HRS</div>
-                                        </div>
-                                    </div>
-                                    <div class="row text-center mx-0">
-                                        <div class="col mx-1 px-1">
-                                            <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">5 HRS</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">6 HRS</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">7 HRS</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">8 HRS</div>
-                                        </div>
-                                    </div>
-                                    <div class="row text-center mx-0">
-                                        <div class="col mx-1 px-1">
-                                            <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">9 HRS</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">10 HRS</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">11 HRS</div>
-                                        </div>
-                                        <div class="col mx-1 px-1">
-                                            <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">12 HRS</div>
-                                        </div>
-                                    </div>
+                    <div class="row bg-blk m-1">
+                        <div class="col raj-wt text-center mx-3" id="dateSelectCol" >
+                            <div id="timeSelect" class="fs-4">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+
+        <div class="row w-100 container-fluid d-flex justify-content-end ">
+            <div class="col my-1">
+        <div id="timeCollapse" class="collapse " aria-labelledby="timeHeading" data-parent="#timeAccordion">
+            <div class="card-body bg-dark container ">
+                <div class="row w-100 mx-0">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col mx-3 my-1 py-1 card-header bg-blk raj-wt fs-4 text-center">Start Time</div>
+                        </div>
+                            <div class="row text-center mx-0">
+                                <div class="col mx-1 px-1">
+                                    <div class="time-cell raj-wt text-center fs-6 px-1 py-1">12 PM</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="time-cell raj-wt text-center fs-6 px-1 py-1">1 PM</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="time-cell raj-wt text-center fs-6 px-1 py-1">2 PM</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="time-cell raj-wt text-center fs-6 px-1 py-1">3 PM</div>
+                                </div>
+                            </div>
+                            <div class="row text-center mx-0">
+                                <div class="col mx-1 px-1">
+                                    <div class="time-cell raj-wt text-center fs-6 px-1 py-1">4 PM</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="time-cell raj-wt text-center fs-6 px-1 py-1">5 PM</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="time-cell raj-wt text-center fs-6 px-1 py-1">6 PM</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="time-cell raj-wt text-center fs-6 px-1 py-1">7 PM</div>
+                                </div>
+                            </div>
+                            <div class="row text-center mx-0">
+                                <div class="col mx-1 px-1">
+                                    <div class="time-cell raj-wt text-center fs-6 px-1 py-1">8 PM</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="time-cell raj-wt text-center fs-6 px-1 py-1">9 PM</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="time-cell raj-wt text-center fs-6 px-1 py-1">10 PM</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="time-cell raj-wt text-center fs-6 px-1 py-1">11 PM</div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col mx-3 my-1 py-1 card-header bg-blk raj-wt fs-4 text-center">Duration</div>
+                        </div>
+                            <div class="row text-center mx-0">
+                                <div class="col mx-1 px-1">
+                                    <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">1 HR</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">2 HRS</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">3 HRS</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">4 HRS</div>
+                                </div>
+                            </div>
+                            <div class="row text-center mx-0">
+                                <div class="col mx-1 px-1">
+                                    <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">5 HRS</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">6 HRS</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">7 HRS</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">8 HRS</div>
+                                </div>
+                            </div>
+                            <div class="row text-center mx-0">
+                                <div class="col mx-1 px-1">
+                                    <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">9 HRS</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">10 HRS</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">11 HRS</div>
+                                </div>
+                                <div class="col mx-1 px-1">
+                                    <div class="dur-cell raj-wt text-center fs-6 px-1 py-1">12 HRS</div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
         </div>
         
 
