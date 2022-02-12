@@ -40,18 +40,19 @@ function displayDate() {
 };
 
 let timeVal = document.getElementsByClassName('time-cell');
-let timeCell = document.getElementsByClassName('time-cell');
+let timeCell = document.getElementsByClassName('timeInput');
+
 // let timeVar = timeCell;
 
 // let timeSelect = timeCell.addEventListener("click", displayTime);
 let showTime = document.getElementById('timeSelect');
 
 function displayTime() {
-  showTime.innerHTML = timeCell[i].value;
+  showTime.innerHTML = String(timeCell.value);
   showTime.style.display = "block";
 };
 
 for (i = 0; i < timeCell.length; i++) {
-  // timeCell[i].addEventListener('click', displayTime, false);
+  timeCell[i].addEventListener('click', displayTime, false);
   console.log(timeCell[i])
 }

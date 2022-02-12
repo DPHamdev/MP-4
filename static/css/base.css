@@ -250,7 +250,6 @@ a:hover {
     
     .time-cell,
     .dur-cell {
-        padding: 2px;
         border: 1px solid #BDBDBD;
         margin: 2px;
         cursor: pointer
