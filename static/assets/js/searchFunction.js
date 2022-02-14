@@ -39,20 +39,11 @@ function displayDate() {
     }
 };
 
-let timeVal = document.getElementsByClassName('time-cell');
-let timeCell = document.getElementsByClassName('timeInput');
-
-// let timeVar = timeCell;
-
-// let timeSelect = timeCell.addEventListener("click", displayTime);
-let showTime = document.getElementById('timeSelect');
-
 function displayTime() {
-  showTime.innerHTML = String(timeCell.value);
-  showTime.style.display = "block";
+  var ele = document.getElementsByName('startTime');
+    
+  for(i = 0; i < ele.length; i++) {
+      if(ele[i].checked)
+        document.getElementById("timeSelect").innerHTML = ele[i].value;
+  }
 };
-
-for (i = 0; i < timeCell.length; i++) {
-  timeCell[i].addEventListener('click', displayTime, false);
-  console.log(timeCell[i])
-}

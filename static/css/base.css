@@ -261,8 +261,8 @@ a:hover {
         background-color:#a31a1a;
     }
     
-    .time-cell.select,
-    .dur-cell.select {
+    .timeInput:checked,
+    .durInput:checked {
         background-color: #000000;
         color: #fff
     }
