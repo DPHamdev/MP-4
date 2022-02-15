@@ -41,9 +41,29 @@ function displayDate() {
 
 function displayTime() {
   var ele = document.getElementsByName('startTime');
-    
   for(i = 0; i < ele.length; i++) {
       if(ele[i].checked)
-        document.getElementById("timeSelect").innerHTML = ele[i].value;
+        var timeDisplay = parseInt(ele[i].value) % 12;
+        if (timeDisplay === 0) timeDisplay = 12;
+        document.getElementById("timeSelect").innerHTML = timeDisplay + " PM";
   }
+};
+
+let endDisplay = document.getElementById("displayEndTime");
+
+function displayEnd() {
+  var tiSelect = document.getElementsByName('startTime');
+  for(x = 0; x < tiSelect.length; x++) {
+    if(tiSelect[x].checked)
+        var tiNum = (parseInt(tiSelect[x].value));
+  };
+  var durSelect = document.getElementsByName('duration');
+  for(i = 0; i < durSelect.length; i++) {
+    if(durSelect[i].checked)
+      var durNum = parseInt(durSelect[i].value);
+  };
+  if (tiNum + durNum >= 13) 
+    var durFormat = durNum % 12;
+    var durFinal = durFormat;
+  document.getElementById("timeSelect").innerHTML += " - " + durFinal + " PM";
 };
