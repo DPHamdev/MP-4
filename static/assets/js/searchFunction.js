@@ -62,8 +62,9 @@ function displayEnd() {
     if(durSelect[i].checked)
       var durNum = parseInt(durSelect[i].value);
   };
-  if (tiNum + durNum >= 13) 
-    var durFormat = durNum % 12;
-    var durFinal = durFormat;
-  document.getElementById("timeSelect").innerHTML += " - " + durFinal + " PM";
+    var disTotal = tiNum + durNum;
+    console.log(disTotal)
+    if (disTotal >= 13)
+      var durFormat = disTotal%12;
+    document.getElementById("durSelect").innerHTML = durFormat + " PM" ;
 };
