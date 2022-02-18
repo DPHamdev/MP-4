@@ -250,21 +250,17 @@ a:hover {
     
     .time-cell,
     .dur-cell {
-        border: 1px solid #BDBDBD;
+        border: 1px solid #ffffff;
         margin: 2px;
-        cursor: pointer
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
     }
-    
+
     .time-cell:hover,
     .dur-cell:hover {
-        border: 1px solid #a31a1a;
-        background-color:#a31a1a;
-    }
-    
-    .timeInput:checked,
-    .durInput:checked {
-        background-color: #000000;
-        color: #fff
+        border: 1px solid #000;
+        background-color: #616161;
     }
     
     .fa-calendar {

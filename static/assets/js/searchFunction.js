@@ -1,3 +1,5 @@
+// Datepicker functionality
+
 $(document).ready(function(){
 
   $('#dp1').datepicker({
@@ -22,9 +24,17 @@ $(document).ready(function(){
   
   });
 
+// Variables required. 
+
 let dateRow = document.getElementById('dateCollapse');
 let datePick = document.getElementById('dp1');
 let showDate = document.getElementById('dateSelect');
+let timeCell = document.getElementsByClassName('time-cell');
+var tiSelect = document.getElementsByName('startTime');
+var durSelect = document.getElementsByName('duration');
+var durLabel = document.getElementsByClassName('durationLabel');
+
+// Display Date 
 
 function displayDate() {
     showDate.innerHTML = String(datePick.value);
@@ -39,25 +49,29 @@ function displayDate() {
     }
 };
 
+// Display start time after selection.
+
 function displayTime() {
-  var ele = document.getElementsByName('startTime');
-  for(i = 0; i < ele.length; i++) {
-      if(ele[i].checked)
-        var timeDisplay = parseInt(ele[i].value) % 12;
+  for(i = 0; i < tiSelect.length; i++) {
+      if(tiSelect[i].checked)
+        var timeDisplay = parseInt(tiSelect[i].value) % 12;
         if (timeDisplay === 0) timeDisplay = 12;
         document.getElementById("timeSelect").innerHTML = timeDisplay + " PM";
+        for (x = 0; x < durSelect.length; x++) {
+          var durDisplay = parseInt(durSelect[i].value);
+          if (timeDisplay + durDisplay >= 24)
+
+        }
   }
 };
 
-let endDisplay = document.getElementById("displayEndTime");
+// Display end time once duration has been selected.
 
 function displayEnd() {
-  var tiSelect = document.getElementsByName('startTime');
   for(x = 0; x < tiSelect.length; x++) {
     if(tiSelect[x].checked)
-        var tiNum = (parseInt(tiSelect[x].value));
+        var tiNum = parseInt(tiSelect[x].value);
   };
-  var durSelect = document.getElementsByName('duration');
   for(i = 0; i < durSelect.length; i++) {
     if(durSelect[i].checked)
       var durNum = parseInt(durSelect[i].value);
@@ -65,6 +79,6 @@ function displayEnd() {
     var disTotal = tiNum + durNum;
     console.log(disTotal)
     if (disTotal >= 13)
-      var durFormat = disTotal%12;
-    document.getElementById("durSelect").innerHTML = durFormat + " PM" ;
+      var durFormat = disTotal % 12;
+    document.getElementById("durSelect").innerHTML = durFormat + " PM";
 };
