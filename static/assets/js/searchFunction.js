@@ -67,14 +67,20 @@ function displayTime() {
               
               var timeValue = timeDisplay + durDisplay >= 24;
               
-              if (timeValue = true) {
+              var parent = durSelect[x].parentNode.nodeName;
+              console.log(parent);
+
+              var spanParent = parent.nextSibling.nodeName;
+              console.log(spanParent);
+
+              // if (timeValue = true) {
                 
-                if(durSelect.parentElement) {
-                    durSelect.parentElement.style.display = 'none';
-                } else {
-                  durSelect.parentElement.style.display = 'inline-block'
-                }
-              }
+              //   if(durSelect.parentNode) {
+              //     durSelect.parentNode.style.display = 'inline-block';
+              //   } else {
+              //     durSelect.parentNode.style.display = 'none';
+              //   }
+              // }
                 
                 
                 
