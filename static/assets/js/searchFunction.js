@@ -1,5 +1,3 @@
-// Datepicker functionality
-
 $(document).ready(function(){
 
   $('#dp1').datepicker({
@@ -46,7 +44,7 @@ function displayDate() {
       else {
         dateRow.style.display == "block"
       }
-    }
+    };
 };
 
 // Display start time after selection.
@@ -55,14 +53,39 @@ function displayTime() {
   for(i = 0; i < tiSelect.length; i++) {
       if(tiSelect[i].checked)
         var timeDisplay = parseInt(tiSelect[i].value) % 12;
-        if (timeDisplay === 0) timeDisplay = 12;
+        if (timeDisplay === 0) {
+          timeDisplay = 12
+        };
         document.getElementById("timeSelect").innerHTML = timeDisplay + " PM";
-        for (x = 0; x < durSelect.length; x++) {
-          var durDisplay = parseInt(durSelect[i].value);
-          if (timeDisplay + durDisplay >= 24)
-
-        }
-  }
+          for (x = 0; x < durSelect.length; x++) {
+            var durDisplay = parseInt(durSelect[x].value);
+            
+            var durId = durSelect[x].getAttribute('id');
+            
+            for (a = 0; a < durLabel.length; a++) {
+              var durFor = durLabel[a].htmlFor;
+              
+              var timeValue = timeDisplay + durDisplay >= 24;
+              
+              if (timeValue = true) {
+                
+                if(durSelect.parentElement) {
+                    durSelect.parentElement.style.display = 'none';
+                } else {
+                  durSelect.parentElement.style.display = 'inline-block'
+                }
+              }
+                
+                
+                
+              
+                
+              }
+        // var durFor = durLabel.htmlFor;
+        // if (durId == durFor)
+        //       durLabel.style.display = 'none';  
+        };
+  };
 };
 
 // Display end time once duration has been selected.

@@ -6,7 +6,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
 
-<div class="container-fluid px-0 mt-3 px-sm-4 mx-auto">
+<div class="container-fluid px-1 mt-3 mx-0">
     <div class="d-flex flex-row justify-content-center mx-0">
         <div class="accordion col-sm-6" id="dateAccordion">
             <div class="card bg-dark">
@@ -64,8 +64,8 @@
     </div>
 </div>
 
-<div class="container-fluid px-0 px-sm-4 mx-auto">
-        <div class="row w-100 d-flex justify-content-end mx-0 ">
+<div class="container-fluid px-1">
+        <div class="flex-row d-flex justify-content-end mx-0 ">
 
             <div class="col my-1">
                 <div id="dateCollapse" class="collapse" aria-labelledby="dateHeading" data-parent="#dateAccordion">
@@ -179,81 +179,81 @@
                             </div>
                         </div>
                             <div class="row d-flex text-center mx-0">
-                                <label class="col-4 mx-0 d-inline-block px-1 dur-cell durationLabel">
+                                <label for="1hr" for="1hr" class="col-4 mx-0 d-inline-block px-1 dur-cell durationLabel">
                                     <span class="raj-wt text-center fs-6 py-1">
-                                    <input value="1" type="radio" onchange="displayEnd()" name="duration" ></input>
+                                    <input id="1hr" value="1" type="radio" onchange="displayEnd()" name="duration" ></input>
                                         1HR
                                     </span>
                                 </label>
-                                <label class="col-4 d-inline-block mx-0 px-1 dur-cell durationLabel">
+                                <label for="2hrs" class="col-4 d-inline-block mx-0 px-1 dur-cell durationLabel">
                                     <span class="raj-wt text-center fs-6 py-1">
-                                    <input value="2" type="radio" onchange="displayEnd()" name="duration" ></input>
+                                    <input id="2hrs" value="2" type="radio" onchange="displayEnd()" name="duration" ></input>
                                         2HRS
                                     </span>
                                 </label>
-                                <label class="col-4 d-inline-block mx-0 px-1 dur-cell durationLabel">
+                                <label for="3hrs" class="col-4 d-inline-block mx-0 px-1 dur-cell durationLabel">
                                     <span class="raj-wt text-center fs-6 py-1">
-                                    <input value="3" type="radio" onchange="displayEnd()" name="duration" ></input>
+                                    <input id="3hrs" value="3" type="radio" onchange="displayEnd()" name="duration" ></input>
                                         3HRS
                                     </span>
                                 </label>
                             </div>
                             <div class="row d-flex text-center mx-0">
-                                <label class="col-4 mx-0 px-0 dur-cell durationLabel">
+                                <label for="4hrs" class="col-4 mx-0 px-0 dur-cell durationLabel">
                                     <span class="raj-wt text-center fs-6 px-1 py-1">
-                                    <input value="4" type="radio" onchange="displayEnd()" name="duration" ></input>
+                                    <input id="4hrs" value="4" type="radio" onchange="displayEnd()" name="duration" ></input>
                                         4HRS
                                     </span>
                                 </label>
-                                <label class="col-4 mx-0 px-0 dur-cell durationLabel">
+                                <label for="5hrs" class="col-4 mx-0 px-0 dur-cell durationLabel">
                                     <span class="raj-wt text-center fs-6 px-1 py-1">
-                                    <input value="5" type="radio" onchange="displayEnd()" name="duration" ></input>
+                                    <input id="5hrs" value="5" type="radio" onchange="displayEnd()" name="duration" ></input>
                                         5HRS
                                     </span>
                                 </label>
-                                <label class="col-4 mx-0 px-0 dur-cell durationLabel">
+                                <label for="6hrs" class="col-4 mx-0 px-0 dur-cell durationLabel">
                                     <span class="raj-wt text-center fs-6 px-1 py-1">
-                                    <input value="6" type="radio" onchange="displayEnd()" name="duration" ></input>
+                                    <input id="6hrs" value="6" type="radio" onchange="displayEnd()" name="duration" ></input>
                                         6HRS
                                     </span>
                                 </label>
                             </div>
                             <div class="row d-flex text-center mx-0">
-                                <label class="col-4 mx-0 px-0 dur-cell durationLabel">
+                                <label for="7hrs" class="col-4 mx-0 px-0 dur-cell durationLabel">
                                     <span class="raj-wt text-center fs-6 px-1 py-1">
-                                    <input value="7" type="radio" onchange="displayEnd()" name="duration" ></input>
+                                    <input id="7hrs" value="7" type="radio" onchange="displayEnd()" name="duration" ></input>
                                         7HRS
                                     </span>
                                 </label>
-                                <label class="col-4 mx-0 px-0 dur-cell durationLabel">
+                                <label for="8hrs" class="col-4 mx-0 px-0 dur-cell durationLabel">
                                     <span class="raj-wt text-center fs-6 px-1 py-1">
-                                    <input value="8" type="radio" onchange="displayEnd()" name="duration" ></input>
+                                    <input id="8hrs" value="8" type="radio" onchange="displayEnd()" name="duration" ></input>
                                         8HRS
                                     </span>
                                 </label>
-                                <label class="col-4 mx-0 px-0 dur-cell durationLabel">
+                                <label for="9hrs" class="col-4 mx-0 px-0 dur-cell durationLabel">
                                     <span class="raj-wt text-center fs-6 px-1 py-1">
-                                    <input value="9" type="radio" onchange="displayEnd()" name="duration" ></input>
+                                    <input id="9hrs" value="9" type="radio" onchange="displayEnd()" name="duration" ></input>
                                         9HRS
                                     </span>
                                 </label>
                             </div>
                             <div class="row d-flex text-center mx-0">
-                                <label class="col-4 mx-0 px-0 dur-cell durationLabel">
+                                <label for="10hrs" class="col-4 mx-0 px-0 dur-cell durationLabel">
                                     <span class="raj-wt text-center fs-6 px-1 py-1">
-                                    <input value="10" type="radio" onchange="displayEnd()" name="duration" ></input>
+                                    <input id="10hrs" value="10" type="radio" onchange="displayEnd()" name="duration" ></input>
                                         10HRS
                                     </span>
                                 </label>
-                                <label class="col-4 mx-0 px-0 dur-cell durationLabel">
+                                <label for="11hrs" class="col-4 mx-0 px-0 dur-cell durationLabel">
                                     <span class="raj-wt text-center fs-6 px-1 py-1">
-                                    <input value="11" type="radio" onchange="displayEnd()" name="duration" ></input>
+                                    <input id="11hrs" value="11" type="radio" onchange="displayEnd()" name="duration" ></input>
                                         11HRS
                                     </span>
                                 </label>
-                                <label class="col-4 mx-0 px-0 dur-cell durationLabel">
+                                <label for="12hrs" class="col-4 mx-0 px-0 dur-cell durationLabel">
                                     <span class="raj-wt text-center fs-6 px-1 py-1">
-                                    <input value="12" type="radio" onchange="displayEnd()" name="duration" ></input>
+                                    <input id="12hrs"value="12" type="radio" onchange="displayEnd()" name="duration" ></input>
                                         12HRS
                                     </span>
                                 </label>
