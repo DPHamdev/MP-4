@@ -58,27 +58,41 @@ function displayDate() {
 
 
 function getStartTime() {
-  var startTimeChecked = document.querySelector('input[name="startTime"]:checked');
-  var startTimeLabelChecked = startTimeChecked.closest('label');
   var startTimeVal = document.querySelector('input[name="startTime"]:checked').value % 12;
   if (startTimeVal === 0) {
     startTimeVal = 12
   }
   
-  if (startTimeChecked.click) {
-    startTimeLabelChecked.setAttribute('style', 'border: 2px solid yellow;');
-  }
   document.getElementById("timeSelect").innerHTML = startTimeVal + " PM";
 
   return
 }
+
+function highlightStartTime() {
+  var startTimeChecked = document.querySelector('input[name="startTime"]:checked');
+  console.log(startTimeChecked)
+  var startTimeLabelChecked = startTimeChecked.closest('label');
+  console.log(startTimeLabelChecked)
+  var timeChange = document.getElementById("timeSelect").innerHTML.onchange;
+
+    if (startTimeChecked) {
+      startTimeLabelChecked.classList.toggle("highlight");
+    } else if (timeChange) {
+        startTimeLabelChecked.classList.remove("highlight");
+    }
+  return
+}
+  // var startTimeLabel = document.querySelectorAll('.startTimeLabel');
+
 
 // Display end time through duration length selection
 
 function getDurationLength() {
   var startTimeVal = document.querySelector('input[name="startTime"]:checked').value;
   var durationLengthVal = document.querySelector('input[name="duration"]:checked').value;
-  var endTimeVal = startTimeVal + durationLengthVal;
+  console.log(durationLengthVal)
+  var endTimeVal = parseInt(startTimeVal) + parseInt(durationLengthVal);
+  console.log(endTimeVal)
 
     if (endTimeVal >= 13) {
       var endTime = endTimeVal % 12;
@@ -90,8 +104,23 @@ function getDurationLength() {
   return
 }
 
+function updateEndTimeOnChange() {
+  var startTimeVal = document.querySelector('input[name="startTime"]:checked').value;
+  var durationLengthVal = document.querySelector('input[name="duration"]:checked').value;
+  var timeChange = document.getElementById("timeSelect").innerHTML.onchange;
+
+  if(timeChange == true) {
+    var newTimeSelect = parseInt(startTimeVal) + parseInt(durationLengthVal);
+    console.log(newTimeSelect)
+    document.getElementById("durSelect").innerHTML = newTimeSelect + " PM";
+  }
+
+}
+
 function updateTimeAndDuration() {
   getStartTime();
+  highlightStartTime();
   getDurationLength();
+  updateEndTimeOnChange();
 }
 

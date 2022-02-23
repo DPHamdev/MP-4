@@ -15,6 +15,11 @@
     background-color: #000 !important;
 }
 
+.highlight {
+    background-color: yellow !important;
+    border: 2px solid black !important;
+}
+
 /* Body CSS */
 
 body {
@@ -239,6 +244,7 @@ a:hover {
         background-color: inherit !important;
         opacity: 1
     }
+
 
     /* Hide the browser's default radio button */
     .startTimeLabel input,
