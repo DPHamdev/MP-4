@@ -243,13 +243,11 @@ a:hover {
     /* Hide the browser's default radio button */
     .startTimeLabel input,
     .durationLabel input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
+    display: none;
   }
-    
-    .time-cell,
-    .dur-cell {
+
+    .startTimeLabel,
+    .durationLabel {
         border: 1px solid #ffffff;
         margin: 2px;
         cursor: pointer;
@@ -257,8 +255,9 @@ a:hover {
         color: #fff;
     }
 
-    .time-cell:hover,
-    .dur-cell:hover {
+
+    .startTimeLabel:hover,
+    .durationLabel:hover {
         border: 1px solid #000;
         background-color: #616161;
     }

@@ -30,7 +30,14 @@ let showDate = document.getElementById('dateSelect');
 let timeCell = document.getElementsByClassName('time-cell');
 var tiSelect = document.getElementsByName('startTime');
 var durSelect = document.getElementsByName('duration');
+var timeLabel = document.querySelectorAll('StartTimeLabel');
 var durLabel = document.getElementsByClassName('durationLabel');
+
+
+
+
+// timeLabel.addEventListener("click", displayTime);
+
 
 // Display Date 
 
@@ -49,65 +56,42 @@ function displayDate() {
 
 // Display start time after selection.
 
-function displayTime() {
-  for(i = 0; i < tiSelect.length; i++) {
-      if(tiSelect[i].checked)
-        var timeDisplay = parseInt(tiSelect[i].value) % 12;
-        if (timeDisplay === 0) {
-          timeDisplay = 12
-        };
-        document.getElementById("timeSelect").innerHTML = timeDisplay + " PM";
-          for (x = 0; x < durSelect.length; x++) {
-            var durDisplay = parseInt(durSelect[x].value);
-            
-            var durId = durSelect[x].getAttribute('id');
-            
-            for (a = 0; a < durLabel.length; a++) {
-              var durFor = durLabel[a].htmlFor;
-              
-              var timeValue = timeDisplay + durDisplay >= 24;
-              
-              var parent = durSelect[x].parentNode.nodeName;
-              console.log(parent);
 
-              var spanParent = parent.nextSibling.nodeName;
-              console.log(spanParent);
+function getStartTime() {
+  var startTimeChecked = document.querySelector('input[name="startTime"]:checked');
+  var startTimeLabelChecked = startTimeChecked.closest('label');
+  var startTimeVal = document.querySelector('input[name="startTime"]:checked').value % 12;
+  if (startTimeVal === 0) {
+    startTimeVal = 12
+  }
+  
+  if (startTimeChecked.click) {
+    startTimeLabelChecked.setAttribute('style', 'border: 2px solid yellow;');
+  }
+  document.getElementById("timeSelect").innerHTML = startTimeVal + " PM";
 
-              // if (timeValue = true) {
-                
-              //   if(durSelect.parentNode) {
-              //     durSelect.parentNode.style.display = 'inline-block';
-              //   } else {
-              //     durSelect.parentNode.style.display = 'none';
-              //   }
-              // }
-                
-                
-                
-              
-                
-              }
-        // var durFor = durLabel.htmlFor;
-        // if (durId == durFor)
-        //       durLabel.style.display = 'none';  
-        };
-  };
-};
+  return
+}
 
-// Display end time once duration has been selected.
+// Display end time through duration length selection
 
-function displayEnd() {
-  for(x = 0; x < tiSelect.length; x++) {
-    if(tiSelect[x].checked)
-        var tiNum = parseInt(tiSelect[x].value);
-  };
-  for(i = 0; i < durSelect.length; i++) {
-    if(durSelect[i].checked)
-      var durNum = parseInt(durSelect[i].value);
-  };
-    var disTotal = tiNum + durNum;
-    console.log(disTotal)
-    if (disTotal >= 13)
-      var durFormat = disTotal % 12;
-    document.getElementById("durSelect").innerHTML = durFormat + " PM";
-};
+function getDurationLength() {
+  var startTimeVal = document.querySelector('input[name="startTime"]:checked').value;
+  var durationLengthVal = document.querySelector('input[name="duration"]:checked').value;
+  var endTimeVal = startTimeVal + durationLengthVal;
+
+    if (endTimeVal >= 13) {
+      var endTime = endTimeVal % 12;
+      if (endTime === 0) {
+        endTime = 12
+      }
+      document.getElementById("durSelect").innerHTML = endTime + " PM";
+    }
+  return
+}
+
+function updateTimeAndDuration() {
+  getStartTime();
+  getDurationLength();
+}
+

@@ -90,84 +90,60 @@
                             </div>
                         </div>
                             <div class="row d-flex w-100 text-center mx-0">
-                                <div class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="12pm" class="mb-0">
-                                        12PM
-                                    </label>
-                                    <input value="12" type="radio" onclick="displayTime()" id="12pm" name="startTime" class="timeInput"></input>
-                                </div>
-                                <div class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="1pm" class="mb-0">
-                                        1PM
-                                    </label>
-                                    <input value="13" type="radio" onclick="displayTime()" id="1pm" name="startTime" class="timeInput"></input>                            
-                                </div>
-                                <div class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="2pm" class="mb-0">
-                                        2PM
-                                    </label>
-                                    <input value="14" type="radio" onclick="displayTime()" id="2pm" name="startTime" class="timeInput"></input>
-                                </div>
+                                <label for="12pm" class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0 mb-0 w-100 h-100">
+                                    <input onclick="updateTimeAndDuration()" value="12" type="radio" id="12pm" name="startTime" class="timeInput"></input>
+                                    12PM
+                                </label>
+                                <label for="1pm" class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0 mb-0 w-100 h-100">
+                                    <input onclick="updateTimeAndDuration()" value="13" type="radio" id="1pm" name="startTime" class="timeInput"></input>
+                                    1PM
+                                </label>
+                                <label for="2pm" class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0 mb-0 w-100 h-100">
+                                    <input onclick="updateTimeAndDuration()" value="14" type="radio" id="2pm" name="startTime" class="timeInput"></input>
+                                    2PM
+                                </label>
                             </div>
                             <div class="row d-flex w-100 text-center mx-0">
-                                <div class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="3pm" class="mb-0">
-                                        3PM
-                                    </label>
-                                    <input value="15" type="radio" onclick="displayTime()" id="3pm" name="startTime" class="timeInput"></input>
-                                </div>
-                                <div class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="4pm" class="mb-0">
-                                        4PM
-                                    </label>
-                                    <input value="16" type="radio" onclick="displayTime()" id="4pm" name="startTime" class="timeInput"></input>                            
-                                </div>
-                                <div class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="5pm" class="mb-0">
-                                        5PM
-                                    </label>
-                                    <input value="17" type="radio" onclick="displayTime()" id="5pm" name="startTime" class="timeInput"></input>
-                                </div>
+                                <label for="3pm" class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0 mb-0 w-100 h-100">
+                                    <input onclick="updateTimeAndDuration()" value="15" type="radio" id="3pm" name="startTime" class="timeInput"></input>
+                                    3PM
+                                </label>
+                                <label for="4pm" class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0 mb-0 w-100 h-100">
+                                    <input onclick="updateTimeAndDuration()" value="16" type="radio" id="4pm" name="startTime" class="timeInput"></input>
+                                    4PM
+                                </label>
+                                <label for="5pm" class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0 mb-0 w-100 h-100">
+                                    <input onclick="updateTimeAndDuration()" value="17" type="radio" id="5pm" name="startTime" class="timeInput"></input>
+                                    5PM
+                                </label>
                             </div>
                             <div class="row d-flex w-100 text-center mx-0">
-                                <div class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="6pm" class="mb-0">
-                                        6PM
-                                    </label>
-                                    <input value="18" type="radio" onclick="displayTime()" id="6pm" name="startTime" class="timeInput"></input>
-                                </div>
-                                <div class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="7pm" class="mb-0">
-                                        7PM
-                                    </label>
-                                    <input value="19" type="radio" onclick="displayTime()" id="7pm" name="startTime" class="timeInput"></input>                            
-                                </div>
-                                <div class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="8pm" class="mb-0">
-                                        8PM
-                                    </label>
-                                    <input value="20" type="radio" onclick="displayTime()" id="8pm" name="startTime" class="timeInput"></input>
-                                </div>
+                                <label for="6pm" class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0 mb-0 w-100 h-100">
+                                    <input onclick="updateTimeAndDuration()" value="18" type="radio" id="6pm" name="startTime" class="timeInput"></input>
+                                    6PM
+                                </label>
+                                <label for="7pm" class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0 mb-0 w-100 h-100">
+                                    <input onclick="updateTimeAndDuration()" value="19" type="radio" id="7pm" name="startTime" class="timeInput"></input>
+                                    7PM
+                                </label>
+                                <label for="8pm" class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0 mb-0 w-100 h-100">
+                                    <input onclick="updateTimeAndDuration()" value="20" type="radio" id="8pm" name="startTime" class="timeInput"></input>
+                                    8PM
+                                </label>
                             </div>
                             <div class="row d-flex w-100 text-center mx-0">
-                                <div class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="9pm" class="mb-0">
-                                        9PM
-                                    </label>
-                                    <input value="21" type="radio" onclick="displayTime()" id="9pm" name="startTime" class="timeInput"></input>
-                                </div>
-                                <div class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="10pm" class="mb-0">
-                                        10PM
-                                    </label>
-                                    <input value="22" type="radio" onclick="displayTime()" id="10pm" name="startTime" class="timeInput"></input>                            
-                                </div>
-                                <div class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="11pm" class="mb-0">
-                                        11PM
-                                    </label>
-                                    <input value="23" type="radio" onclick="displayTime()" id="11pm" name="startTime" class="timeInput"></input>
-                                </div>
+                                <label for="9pm" class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0 mb-0 w-100 h-100">
+                                    <input onclick="updateTimeAndDuration()" value="21" type="radio" id="9pm" name="startTime" class="timeInput"></input>
+                                    9PM
+                                </label>
+                                <label for="10pm" class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0 mb-0 w-100 h-100">
+                                    <input onclick="updateTimeAndDuration()" value="22" type="radio" id="10pm" name="startTime" class="timeInput"></input>
+                                    10PM
+                                </label>
+                                <label for="11pm" class="col-4 time-cell startTimeLabel raj-wt text-center fs-6 px-1 py-1 mx-0 mb-0 w-100 h-100">
+                                    <input onclick="updateTimeAndDuration()" value="23" type="radio" id="11pm" name="startTime" class="timeInput"></input>
+                                    11PM
+                                </label>
                             </div>
                     </div>
                     
@@ -179,84 +155,60 @@
                             </div>
                         </div>
                             <div class="row d-flex text-center mx-0">
-                                <div class="col-4 dur-cell durationLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="1hr" class="mb-0">
+                                    <label for="1hr" class="col-4 dur-cell durationLabel raj-wt text-center fs-6 p-1 mx-0 mb-0">
+                                        <input id="1hr" value="1" type="radio" onchange="updateTimeAndDuration()" name="duration" ></input>
                                         1HR
                                     </label>
-                                    <input id="1hr" value="1" type="radio" onchange="displayEnd()" name="duration" ></input>
-                                </div>
-                                <div class="col-4 dur-cell durationLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="2hrs" class="mb-0">
+                                    <label for="2hrs" class="col-4 dur-cell durationLabel raj-wt text-center fs-6 p-1 mx-0 mb-0">
+                                        <input id="2hrs" value="2" type="radio" onchange="updateTimeAndDuration()" name="duration" ></input>
                                         2HRS
                                     </label>
-                                    <input id="1hr" value="2" type="radio" onchange="displayEnd()" name="duration" ></input>
-                                </div>
-                                <div class="col-4 dur-cell durationLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="3hrs" class="mb-0">
+                                    <label for="3hrs" class="col-4 dur-cell durationLabel raj-wt text-center fs-6 p-1 mx-0 mb-0">
+                                        <input id="3hrs" value="3" type="radio" onchange="updateTimeAndDuration()" name="duration" ></input>
                                         3HRS
                                     </label>
-                                    <input id="3hrs" value="3" type="radio" onchange="displayEnd()" name="duration" ></input>
-                                </div>
                             </div>
                             <div class="row d-flex text-center mx-0">
-                                <div class="col-4 dur-cell durationLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="4hrs" class="mb-0">
+                                    <label for="4hrs" class="col-4 dur-cell durationLabel raj-wt text-center fs-6 p-1 mx-0 mb-0">
+                                        <input id="4hrs" value="4" type="radio" onchange="updateTimeAndDuration()" name="duration" ></input>
                                         4HRS
                                     </label>
-                                    <input id="4hrs" value="4" type="radio" onchange="displayEnd()" name="duration" ></input>
-                                </div>
-                                <div class="col-4 dur-cell durationLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="5hrs" class="mb-0">
+                                    <label for="5hrs" class="col-4 dur-cell durationLabel raj-wt text-center fs-6 p-1 mx-0 mb-0">
+                                        <input id="5hrs" value="5" type="radio" onchange="updateTimeAndDuration()" name="duration" ></input>
                                         5HRS
                                     </label>
-                                    <input id="5hrs" value="5" type="radio" onchange="displayEnd()" name="duration" ></input>
-                                </div>
-                                <div class="col-4 dur-cell durationLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="6hrs" class="mb-0">
+                                    <label for="6hrs" class="col-4 dur-cell durationLabel raj-wt text-center fs-6 p-1 mx-0 mb-0">
+                                        <input id="6hrs" value="6" type="radio" onchange="updateTimeAndDuration()" name="duration" ></input>
                                         6HRS
                                     </label>
-                                    <input id="6hrs" value="6" type="radio" onchange="displayEnd()" name="duration" ></input>
-                                </div>
                             </div>
                             <div class="row d-flex text-center mx-0">
-                                <div class="col-4 dur-cell durationLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="7hrs" class="mb-0">
+                                    <label for="7hrs" class="col-4 dur-cell durationLabel raj-wt text-center fs-6 p-1 mx-0 mb-0">
+                                        <input id="7hrs" value="7" type="radio" onchange="updateTimeAndDuration()" name="duration" ></input>
                                         7HRS
                                     </label>
-                                    <input id="7hrs" value="7" type="radio" onchange="displayEnd()" name="duration" ></input>
-                                </div>
-                                <div class="col-4 dur-cell durationLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="8hrs" class="mb-0">
+                                    <label for="8hrs" class="col-4 dur-cell durationLabel raj-wt text-center fs-6 p-1 mx-0 mb-0">
+                                        <input id="8hrs" value="8" type="radio" onchange="updateTimeAndDuration()" name="duration" ></input>
                                         8HRS
                                     </label>
-                                    <input id="8hrs" value="8" type="radio" onchange="displayEnd()" name="duration" ></input>
-                                </div>
-                                <div class="col-4 dur-cell durationLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="9hrs" class="mb-0">
+                                    <label for="9hrs" class="col-4 dur-cell durationLabel raj-wt text-center fs-6 p-1 mx-0 mb-0">
+                                        <input id="9hrs" value="9" type="radio" onchange="updateTimeAndDuration()" name="duration" ></input>
                                         9HRS
                                     </label>
-                                    <input id="9hrs" value="9" type="radio" onchange="displayEnd()" name="duration" ></input>
-                                </div>
                             </div>
                             <div class="row d-flex text-center mx-0">
-                                <div class="col-4 dur-cell durationLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="10hrs" class="mb-0">
+                                    <label for="10hrs" class="col-4 dur-cell durationLabel raj-wt text-center fs-6 p-1 mx-0 mb-0">
+                                        <input id="10hrs" value="10" type="radio" onchange="updateTimeAndDuration()" name="duration" ></input>
                                         10HRS
                                     </label>
-                                    <input id="10hrs" value="10" type="radio" onchange="displayEnd()" name="duration" ></input>
-                                </div>
-                                <div class="col-4 dur-cell durationLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="11hrs" class="mb-0">
+                                    <label for="11hrs" class="col-4 dur-cell durationLabel raj-wt text-center fs-6 p-1 mx-0 mb-0">
+                                        <input id="11hrs" value="11" type="radio" onchange="updateTimeAndDuration()" name="duration" ></input>
                                         11HRS
                                     </label>
-                                    <input id="11hrs" value="11" type="radio" onchange="displayEnd()" name="duration" ></input>
-                                </div>
-                                <div class="col-4 dur-cell durationLabel raj-wt text-center fs-6 px-1 py-1 mx-0">
-                                    <label for="12hrs" class="mb-0">
+                                    <label for="12hrs" class="col-4 dur-cell durationLabel raj-wt text-center fs-6 p-1 mx-0 mb-0">
+                                        <input id="12hrs" value="12" type="radio" onchange="updateTimeAndDuration()" name="duration" ></input>
                                         12HRS
                                     </label>
-                                    <input id="12hrs" value="12" type="radio" onchange="displayEnd()" name="duration" ></input>
-                                </div>
                             </div>
                     </div>
 
