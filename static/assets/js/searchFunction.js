@@ -34,11 +34,6 @@ var timeLabel = document.querySelectorAll('StartTimeLabel');
 var durLabel = document.getElementsByClassName('durationLabel');
 
 
-
-
-// timeLabel.addEventListener("click", displayTime);
-
-
 // Display Date 
 
 function displayDate() {
@@ -65,25 +60,18 @@ function getStartTime() {
   
   document.getElementById("timeSelect").innerHTML = startTimeVal + " PM";
 
-  return
-}
-
-function highlightStartTime() {
   var startTimeChecked = document.querySelector('input[name="startTime"]:checked');
   console.log(startTimeChecked)
   var startTimeLabelChecked = startTimeChecked.closest('label');
   console.log(startTimeLabelChecked)
-  var timeChange = document.getElementById("timeSelect").innerHTML.onchange;
 
-    if (startTimeChecked) {
-      startTimeLabelChecked.classList.toggle("highlight");
-    } else if (timeChange) {
-        startTimeLabelChecked.classList.remove("highlight");
-    }
+  // if (startTimeChecked = true) {
+  //   startTimeLabelChecked.classList.toggle('highlight');
+  // } else {
+  //   startTimeLabelChecked.classList.toggle('highlight');
+  // }
   return
 }
-  // var startTimeLabel = document.querySelectorAll('.startTimeLabel');
-
 
 // Display end time through duration length selection
 
@@ -119,7 +107,6 @@ function updateEndTimeOnChange() {
 
 function updateTimeAndDuration() {
   getStartTime();
-  highlightStartTime();
   getDurationLength();
   updateEndTimeOnChange();
 }

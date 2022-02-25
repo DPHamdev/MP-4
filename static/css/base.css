@@ -247,10 +247,14 @@ a:hover {
 
 
     /* Hide the browser's default radio button */
-    .startTimeLabel input,
-    .durationLabel input {
+    input[type=radio] {
     display: none;
-  }
+    }
+
+    input[name=startTime]:checked + label {
+        background-color: yellow;
+    } 
+
 
     .startTimeLabel,
     .durationLabel {
