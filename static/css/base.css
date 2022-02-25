@@ -251,8 +251,10 @@ a:hover {
     display: none;
     }
 
-    input[name=startTime]:checked + label {
-        background-color: yellow;
+    input[name=startTime]:checked + label,
+    input[name=duration]:checked + label {
+        background-color: white;
+        color: black;
     } 
 
 
