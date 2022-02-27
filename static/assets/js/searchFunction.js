@@ -109,19 +109,30 @@ function updateEndTimeOnChange() {
 function hideDuration () {
   var startTimeVal = document.querySelector('input[name="startTime"]:checked').value;
   var durationLength = document.querySelectorAll('input[name="duration"]');
+  // var durationSelected = document.querySelector('input[name="duration"]:checked');
 
   for (i=0; i<durationLength.length; i++) {
     var durationLengthNodeVal = durationLength[i].value;
     var durationNextSibling = durationLength[i].nextElementSibling;
 
     if (parseInt(durationLengthNodeVal) + parseInt(startTimeVal) >= 25 == true) {
-      durationNextSibling.style.display = "none"
+      durationNextSibling.style.display = "none";
     } else {
-      durationNextSibling.style.display = "block"
+      durationNextSibling.style.display = "block";
     };
   };
+};
 
-}
+
+function hideExceededDurationSelection() {
+  var durationSelectedValue = document.querySelector('input[name="duration"]:checked').value;
+  var startTimeVal = document.querySelector('input[name="startTime"]:checked').value;
+
+  if (parseInt(durationSelectedValue) + parseInt(startTimeVal) >= 25 == true) {
+    document.getElementById("durSelect").innerHTML = "";
+  };
+};
+
 
 function updateTimeAndDuration() {
   getStartTime();
@@ -129,5 +140,6 @@ function updateTimeAndDuration() {
   hideDuration();
   getDurationLength();
   updateEndTimeOnChange();
+  hideExceededDurationSelection();
 
 }
