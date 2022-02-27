@@ -86,8 +86,10 @@ function getDurationLength() {
       var endTime = endTimeVal % 12;
       if (endTime === 0) {
         endTime = 12
+        document.getElementById("durSelect").innerHTML = endTime + " AM";
+      } else if (endTime < 12) {
+        document.getElementById("durSelect").innerHTML = endTime + " PM";
       }
-      document.getElementById("durSelect").innerHTML = endTime + " PM";
     }
   return
 }
@@ -97,12 +99,13 @@ function updateEndTimeOnChange() {
   var startTimeVal = document.querySelector('input[name="startTime"]:checked').value;
   var durationLengthVal = document.querySelector('input[name="duration"]:checked').value;
   var timeChange = document.getElementById("timeSelect").innerHTML.onchange;
+  var newTimeSelect = parseInt(startTimeVal) + parseInt(durationLengthVal);
 
   if(timeChange == true) {
-    var newTimeSelect = parseInt(startTimeVal) + parseInt(durationLengthVal);
     console.log(newTimeSelect)
     document.getElementById("durSelect").innerHTML = newTimeSelect + " PM";
-  }
+  } 
+  
 
 }
 
