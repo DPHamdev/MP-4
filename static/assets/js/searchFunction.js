@@ -27,6 +27,8 @@ $(document).ready(function(){
 let dateRow = document.getElementById('dateCollapse');
 let datePick = document.getElementById('dp1');
 let showDate = document.getElementById('dateSelect');
+let showTime = document.getElementById("timeSelect");
+let showTimeRow = document.getElementById('timeSelectRow');
 let timeCell = document.getElementsByClassName('time-cell');
 var tiSelect = document.getElementsByName('startTime');
 var durSelect = document.getElementsByName('duration');
@@ -57,30 +59,28 @@ function getStartTime() {
   if (startTimeVal === 0) {
     startTimeVal = 12
   }
-  
+
   document.getElementById("timeSelect").innerHTML = startTimeVal + " PM";
 
-  var startTimeChecked = document.querySelector('input[name="startTime"]:checked');
-  console.log(startTimeChecked)
-  var startTimeLabelChecked = startTimeChecked.closest('label');
-  console.log(startTimeLabelChecked)
-
-  // if (startTimeChecked = true) {
-  //   startTimeLabelChecked.classList.toggle('highlight');
-  // } else {
-  //   startTimeLabelChecked.classList.toggle('highlight');
-  // }
   return
 }
+  
+function displayTimeSelect() {
+    if (showTimeRow.style.display = "none") {
+      showTimeRow.style.display = "flex";
+    } else {
+      showTimeRow.style.display = "none";
+    }
+}
+
+
 
 // Display end time through duration length selection
 
 function getDurationLength() {
   var startTimeVal = document.querySelector('input[name="startTime"]:checked').value;
   var durationLengthVal = document.querySelector('input[name="duration"]:checked').value;
-  console.log(durationLengthVal)
   var endTimeVal = parseInt(startTimeVal) + parseInt(durationLengthVal);
-  console.log(endTimeVal)
 
     if (endTimeVal >= 13) {
       var endTime = endTimeVal % 12;
@@ -91,6 +91,7 @@ function getDurationLength() {
     }
   return
 }
+
 
 function updateEndTimeOnChange() {
   var startTimeVal = document.querySelector('input[name="startTime"]:checked').value;
@@ -105,9 +106,28 @@ function updateEndTimeOnChange() {
 
 }
 
-function updateTimeAndDuration() {
-  getStartTime();
-  getDurationLength();
-  updateEndTimeOnChange();
+function hideDuration () {
+  var startTimeVal = document.querySelector('input[name="startTime"]:checked').value;
+  var durationLength = document.querySelectorAll('input[name="duration"]');
+
+  for (i=0; i<durationLength.length; i++) {
+    var durationLengthNodeVal = durationLength[i].value;
+    var durationNextSibling = durationLength[i].nextElementSibling;
+
+    if (parseInt(durationLengthNodeVal) + parseInt(startTimeVal) >= 25 == true) {
+      durationNextSibling.style.display = "none"
+    } else {
+      durationNextSibling.style.display = "block"
+    };
+  };
+
 }
 
+function updateTimeAndDuration() {
+  getStartTime();
+  displayTimeSelect();
+  hideDuration();
+  getDurationLength();
+  updateEndTimeOnChange();
+
+}

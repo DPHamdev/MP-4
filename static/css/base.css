@@ -245,6 +245,9 @@ a:hover {
         opacity: 1
     }
 
+    #timeSelectRow {
+        display: none;
+    }
 
     /* Hide the browser's default radio button */
     input[type=radio] {
